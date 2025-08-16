@@ -1,3 +1,12 @@
+# Load trained model and class names
+model = joblib.load("model.pkl")
+class_names = joblib.load("classes.pkl")
+# Load trained model
+model = joblib.load("model.pkl")
+
+# Hardcode class names
+class_names = ['setosa', 'versicolor', 'virginica']
+
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import joblib
